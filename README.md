@@ -24,5 +24,11 @@ After changing the Niri configuration, validate it with:
 niri validate --config "$HOME/.config/niri/config.kdl"
 ```
 
+To refresh the LG DisplayPort link after a suspend/resume flicker:
+
+```sh
+./scripts/reset-lg-display.sh
+```
+
 The Niri output names and display settings are specific to the current
 machine. Review the `output` blocks before using this configuration elsewhere.
