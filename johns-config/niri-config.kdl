@@ -1,0 +1,475 @@
+"window-rule"  {
+  "clip-to-geometry" true
+  "geometry-corner-radius" 6
+}
+"window-rule"  {
+  "match" "app-id"="dev.noctalia.Noctalia"
+  "default-column-width"  {
+    "fixed" 1080
+  }
+  "default-window-height"  {
+    "fixed" 920
+  }
+  "open-floating" true
+}
+"window-rule"  {
+  "match" "app-id"="1password"
+  "default-column-width"  {
+    "fixed" 1000
+  }
+  "default-window-height"  {
+    "fixed" 700
+  }
+  "open-floating" true
+  "open-focused" true
+}
+"window-rule"  {
+  "match" "app-id"="code"
+  "open-focused" true
+  "open-maximized" true
+}
+"window-rule"  {
+  "match" "app-id"="com.mitchellh.ghostty"
+  "background-effect"  {
+    "blur" true
+    "noise" 0.05
+    "saturation" 3
+    "xray" true
+  }
+  "default-column-width"  {
+    "proportion" 0.5
+  }
+  "default-window-height"  {
+    "proportion" 1.0
+  }
+  "draw-border-with-background" false
+  "opacity" 0.85
+  "open-floating" false
+  "open-focused" true
+  "scroll-factor" 3.0
+}
+"window-rule"  {
+  "match" "app-id"="brave-browser"
+  "default-column-width"  {
+    "proportion" 0.5
+  }
+  "default-window-height"  {
+    "proportion" 1.0
+  }
+  "open-floating" false
+  "open-focused" true
+}
+"window-rule"  {
+  "match" "app-id"="discord"
+  "background-effect"  {
+    "blur" true
+    "noise" 0.05
+    "saturation" 3
+    "xray" true
+  }
+  "default-window-height"  {
+    "proportion" 1.0
+  }
+  "draw-border-with-background" false
+  "opacity" 0.85
+  "open-floating" false
+  "open-focused" true
+}
+"layer-rule"  {
+  "match" "namespace"="^noctalia-wallpaper"
+  "place-within-backdrop" true
+}
+"spawn-at-startup" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia"
+"output" "Dell Inc. DELL P2717H YKNFG82DA7XS" {
+  "hot-corners"  {
+    "off"  {
+
+    }
+  }
+  "layout"  {
+    "default-column-width"  {
+      "proportion" 1.0
+    }
+  }
+  "position" "x"=3072 "y"=0
+  "scale" 1.0
+  "transform" "270"
+}
+"output" "Dell Inc. DELL S3221QS 45JHB33" {
+  "focus-at-startup"  {
+
+  }
+  "hot-corners"  {
+    "off"  {
+
+    }
+  }
+  "mode" "3840x2160@60.000"
+  "position" "x"=0 "y"=0
+  "scale" 1.25
+}
+"output" "eDP-1" {
+  "scale" 1.75
+}
+"binds"  {
+  "Alt+F4"  {
+    "close-window"  {
+
+    }
+  }
+  "Alt+Print"  {
+    "screenshot-window"  {
+
+    }
+  }
+  "Alt+Tab" "hotkey-overlay-title"="Window Switcher" {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg window-switcher"
+  }
+  "Mod+1"  {
+    "focus-workspace" 1
+  }
+  "Mod+2"  {
+    "focus-workspace" 2
+  }
+  "Mod+3"  {
+    "focus-workspace" 3
+  }
+  "Mod+4"  {
+    "focus-workspace" 4
+  }
+  "Mod+5"  {
+    "focus-workspace" 5
+  }
+  "Mod+6"  {
+    "focus-workspace" 6
+  }
+  "Mod+7"  {
+    "focus-workspace" 7
+  }
+  "Mod+8"  {
+    "focus-workspace" 8
+  }
+  "Mod+9"  {
+    "focus-workspace" 9
+  }
+  "Mod+Alt+L" "hotkey-overlay-title"="Lock and Suspend" {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg session lock-and-suspend"
+  }
+  "Mod+B" "hotkey-overlay-title"="Browser (Brave)" {
+    "spawn-sh" "/nix/store/z2qw3pipma15br5bvj0j04jdvc8287ii-brave-1.96.61/bin/brave"
+  }
+  "Mod+C"  {
+    "center-column"  {
+
+    }
+  }
+  "Mod+Comma" "hotkey-overlay-title"="Noctalia Settings" {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg settings-toggle"
+  }
+  "Mod+Ctrl+C"  {
+    "center-visible-columns"  {
+
+    }
+  }
+  "Mod+Ctrl+F"  {
+    "expand-column-to-available-width"  {
+
+    }
+  }
+  "Mod+Ctrl+Left"  {
+    "consume-or-expel-window-left"  {
+
+    }
+  }
+  "Mod+Ctrl+Right"  {
+    "consume-or-expel-window-right"  {
+
+    }
+  }
+  "Mod+Down"  {
+    "focus-window-or-workspace-down"  {
+
+    }
+  }
+  "Mod+End"  {
+    "focus-column-last"  {
+
+    }
+  }
+  "Mod+Equal"  {
+    "set-column-width" "+10%"
+  }
+  "Mod+F"  {
+    "maximize-window-to-edges"  {
+
+    }
+  }
+  "Mod+H"  {
+    "switch-preset-window-height"  {
+
+    }
+  }
+  "Mod+Home"  {
+    "focus-column-first"  {
+
+    }
+  }
+  "Mod+L" "hotkey-overlay-title"="Session Menu" {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg panel-toggle session"
+  }
+  "Mod+Left"  {
+    "focus-column-or-monitor-left"  {
+
+    }
+  }
+  "Mod+Minus"  {
+    "set-column-width" "-10%"
+  }
+  "Mod+O"  {
+    "toggle-overview"  {
+
+    }
+  }
+  "Mod+Q"  {
+    "close-window"  {
+
+    }
+  }
+  "Mod+R"  {
+    "switch-preset-column-width"  {
+
+    }
+  }
+  "Mod+Return" "hotkey-overlay-title"="Terminal (Ghostty)" {
+    "spawn-sh" "/nix/store/i5zqr903i6yb642h9amwh5174n5bmfc4-ghostty-1.3.1/bin/ghostty"
+  }
+  "Mod+Right"  {
+    "focus-column-or-monitor-right"  {
+
+    }
+  }
+  "Mod+Shift+1"  {
+    "move-column-to-workspace" 1
+  }
+  "Mod+Shift+2"  {
+    "move-column-to-workspace" 2
+  }
+  "Mod+Shift+3"  {
+    "move-column-to-workspace" 3
+  }
+  "Mod+Shift+4"  {
+    "move-column-to-workspace" 4
+  }
+  "Mod+Shift+5"  {
+    "move-column-to-workspace" 5
+  }
+  "Mod+Shift+6"  {
+    "move-column-to-workspace" 6
+  }
+  "Mod+Shift+7"  {
+    "move-column-to-workspace" 7
+  }
+  "Mod+Shift+8"  {
+    "move-column-to-workspace" 8
+  }
+  "Mod+Shift+9"  {
+    "move-column-to-workspace" 9
+  }
+  "Mod+Shift+Ctrl+Down"  {
+    "move-column-to-monitor-down"  {
+
+    }
+  }
+  "Mod+Shift+Ctrl+Left"  {
+    "move-column-to-monitor-left"  {
+
+    }
+  }
+  "Mod+Shift+Ctrl+Right"  {
+    "move-column-to-monitor-right"  {
+
+    }
+  }
+  "Mod+Shift+Ctrl+Up"  {
+    "move-column-to-monitor-up"  {
+
+    }
+  }
+  "Mod+Shift+Down"  {
+    "move-window-to-workspace-down"  {
+
+    }
+  }
+  "Mod+Shift+End"  {
+    "move-column-to-last"  {
+
+    }
+  }
+  "Mod+Shift+Equal"  {
+    "set-window-height" "+10%"
+  }
+  "Mod+Shift+F"  {
+    "fullscreen-window"  {
+
+    }
+  }
+  "Mod+Shift+Home"  {
+    "move-column-to-first"  {
+
+    }
+  }
+  "Mod+Shift+Left"  {
+    "move-column-left-or-to-monitor-left"  {
+
+    }
+  }
+  "Mod+Shift+Minus"  {
+    "set-window-height" "-10%"
+  }
+  "Mod+Shift+R" "hotkey-overlay-title"="Restart Noctalia Shell" {
+    "spawn-sh" "pkill -f /nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia; niri msg action spawn -- /nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia"
+  }
+  "Mod+Shift+Right"  {
+    "move-column-right-or-to-monitor-right"  {
+
+    }
+  }
+  "Mod+Shift+Slash"  {
+    "show-hotkey-overlay"  {
+
+    }
+  }
+  "Mod+Shift+Up"  {
+    "move-window-to-workspace-up"  {
+
+    }
+  }
+  "Mod+Space" "hotkey-overlay-title"="App Launcher" {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg panel-toggle launcher"
+  }
+  "Mod+T"  {
+    "toggle-window-floating"  {
+
+    }
+  }
+  "Mod+Tab"  {
+    "focus-workspace-previous"  {
+
+    }
+  }
+  "Mod+Up"  {
+    "focus-window-or-workspace-up"  {
+
+    }
+  }
+  "Mod+W"  {
+    "toggle-column-tabbed-display"  {
+
+    }
+  }
+  "Mod+WheelScrollDown"  {
+    "focus-column-right"  {
+
+    }
+  }
+  "Mod+WheelScrollUp"  {
+    "focus-column-left"  {
+
+    }
+  }
+  "Print"  {
+    "screenshot"  {
+
+    }
+  }
+  "XF86AudioLowerVolume"  {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg volume-down"
+  }
+  "XF86AudioMute"  {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg volume-mute"
+  }
+  "XF86AudioRaiseVolume"  {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg volume-up"
+  }
+  "XF86MonBrightnessDown"  {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg brightness-down"
+  }
+  "XF86MonBrightnessUp"  {
+    "spawn-sh" "/nix/store/66r6li4qc325n917gq20mxd9kii0anv2-noctalia-5.2.1/bin/noctalia msg brightness-up"
+  }
+}
+"cursor"  {
+  "xcursor-size" 16
+}
+"debug"  {
+  "honor-xdg-activation-with-invalid-serial"  {
+
+  }
+}
+"input"  {
+  "keyboard"  {
+    "numlock" true
+    "xkb"  {
+      "layout" "us"
+    }
+  }
+  "mouse"  {
+    "accel-profile" "flat"
+    "accel-speed" 0.1
+  }
+  "touchpad"  {
+    "click-method" "clickfinger"
+    "dwt"  {
+
+    }
+    "natural-scroll"  {
+
+    }
+    "tap"  {
+
+    }
+  }
+  "workspace-auto-back-and-forth"  {
+
+  }
+}
+"layout"  {
+  "always-center-single-column" true
+  "background-color" "transparent"
+  "center-focused-column" "on-overflow"
+  "default-column-width"  {
+    "proportion" 0.75
+  }
+  "focus-ring"  {
+    "active-color" "#7fc8ff"
+    "width" 2
+  }
+  "gaps" 8
+  "preset-column-widths"  {
+    "proportion" 0.35
+    "proportion" 0.5
+    "proportion" 0.65
+  }
+  "preset-window-heights"  {
+    "proportion" 0.35
+    "proportion" 0.5
+    "proportion" 0.65
+    "proportion" 1.0
+  }
+  "struts"  {
+    "bottom" 6
+    "left" 4
+    "right" 4
+    "top" 6
+  }
+}
+"overview"  {
+  "workspace-shadow"  {
+    "off"  {
+
+    }
+  }
+}
+"xwayland-satellite"  {
+  "path" "/nix/store/0zpqsqhfx00wsicjdl2sda3zdhxdzdyl-xwayland-satellite-0.8.3/bin/xwayland-satellite"
+}

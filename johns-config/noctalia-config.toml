@@ -1,0 +1,171 @@
+[bar.default]
+auto_hide = false
+center = [ "clock" ]
+enabled = true
+end = [
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "davemhammer/tailscale:status",
+    "bluetooth",
+    "volume",
+    "sysmon",
+    "nomadcxx/gamer-mode:gamermode",
+    "session"
+]
+position = "top"
+start = [ "workspaces", "battery" ]
+
+[dock]
+pinned = [ "code" ]
+position = "left"
+
+[hot_corners]
+enabled = false
+
+[lockscreen]
+wallpaper = "/nix/store/j2kiw2vhmzw5hwmix70082xcij5kqacf-catppuccin-mocha-2024-02-15/share/wallpapers/catppuccin-mocha/contents/images/3840x2160.png"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-5", "lockscreen-login-box@DP-1", "lockscreen-login-box@HDMI-A-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 720.0
+    cy = 2128.5927734375
+    output = "DP-1"
+    placement_height = 2560.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-5"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 540.0
+    cy = 1783.5
+    output = "DP-5"
+    placement_height = 1920.0
+    placement_width = 1080.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-5".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1536.0
+    cy = 1546.0
+    output = "HDMI-A-1"
+    placement_height = 1728.0
+    placement_width = 3072.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugins]
+enabled = [ "notfinaldev/youtube-search", "davemhammer/tailscale", "nomadcxx/gamer-mode" ]
+
+[shell]
+clipboard_confirm_clear_history = true
+clipboard_enabled = true
+font_family = "Hack Nerd Font"
+lang = "en"
+telemetry_enabled = true
+
+    [shell.screenshot]
+    copy_to_clipboard = true
+    freeze_screen = true
+    save_to_file = false
+
+[storage]
+key_source = "secret-service"
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+directory = "/home/john/Pictures/Wallpapers"
+
+    [wallpaper.default]
+    path = "/home/john/Pictures/Wallpapers/wallhaven_n6l7x6.jpg"
+
+    [wallpaper.last]
+    path = "/home/john/Pictures/Wallpapers/wallhaven_n6l7x6.jpg"
+
+[widget.battery]
+display_mode = "graphic"
+hide_when_plugged = false
+label_content = "rate"
+
+[widget.clock]
+format = "{:%I:%M %p %a, %b %e}"
+
+[widget.network]
+show_label = false
+
+[widget.sysmon]
+stat = "net_rx"
+visualization = "graph"
+
+[widget.volume]
+show_label = false

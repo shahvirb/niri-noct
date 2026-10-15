@@ -1,0 +1,24 @@
+# Gamer Mode plugin and its compact bar toggle.
+[plugins]
+enabled = [ "nomadcxx/gamer-mode" ]
+
+[bar.default]
+start = [
+    "launcher",
+    "wallpaper",
+    "workspaces",
+    "media",
+]
+end = [
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "nomadcxx/gamer-mode:gamermode",
+    "session",
+]

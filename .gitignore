@@ -1,0 +1,7 @@
+# Editor and OS temporary files
+.DS_Store
+*.swp
+*.swo
+
+# Local backup files created by install.sh
+*.backup-*

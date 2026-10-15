@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "configuring-niri": {
+      "source": "seanedwards/ai-dotfiles",
+      "sourceType": "github",
+      "skillPath": "niri/skills/configuring-niri/SKILL.md",
+      "computedHash": "0f95affc950851151659dd7e2d5d30078801d1c4300c373be170c1198c62d1e4"
+    }
+  }
+}
