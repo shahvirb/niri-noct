@@ -30,5 +30,12 @@ To refresh the LG DisplayPort link after a suspend/resume flicker:
 ./scripts/reset-lg-display.sh
 ```
 
+The display reset watcher is installed as a user systemd service. It runs once
+after login and again after each suspend/resume cycle:
+
+```sh
+systemctl --user status niri-lg-display-reset.service
+```
+
 The Niri output names and display settings are specific to the current
 machine. Review the `output` blocks before using this configuration elsewhere.

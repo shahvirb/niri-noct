@@ -1,0 +1,13 @@
+[Unit]
+Description=Reset LG DisplayPort link after login and resume
+After=graphical-session.target niri.service
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/gitsource/niri-noct/scripts/watch-lg-display.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target

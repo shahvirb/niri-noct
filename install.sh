@@ -28,4 +28,12 @@ link_config "$repo_dir/niri/config.kdl" "$config_home/niri/config.kdl"
 link_config "$repo_dir/noctalia/config.toml" "$config_home/noctalia/config.toml"
 link_config "$repo_dir/noctalia/gamer-mode.toml" "$config_home/noctalia/gamer-mode.toml"
 
+systemd_user_home="$config_home/systemd/user"
+link_config \
+    "$repo_dir/systemd/user/niri-lg-display-reset.service" \
+    "$systemd_user_home/niri-lg-display-reset.service"
+
+systemctl --user daemon-reload
+systemctl --user enable --now niri-lg-display-reset.service
+
 printf 'Configuration links are installed.\n'
