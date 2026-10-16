@@ -49,7 +49,8 @@ binds {
     MOD+SHIFT+ESCAPE                     hotkey-overlay-title="Show keybind cheatsheet" { show-hotkey-overlay; }
 
     // ─── Applications ───
-    MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
+    MOD+RETURN                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn-sh "ghostty"; }
+    ALT+RETURN                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn-sh "ghostty"; }
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: Noctalia" { spawn-sh "noctalia msg panel-toggle launcher"; }
     MOD+B                               hotkey-overlay-title="Open Browser: brave" { spawn-sh "brave"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
