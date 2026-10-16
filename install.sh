@@ -27,6 +27,9 @@ link_config() {
 link_config "$repo_dir/niri/config.kdl" "$config_home/niri/config.kdl"
 link_config "$repo_dir/noctalia/config.toml" "$config_home/noctalia/config.toml"
 link_config "$repo_dir/noctalia/gamer-mode.toml" "$config_home/noctalia/gamer-mode.toml"
+link_config "$repo_dir/ghostty/config" "$config_home/ghostty/config"
+link_config "$repo_dir/zsh/.zshrc" "$HOME/.zshrc"
+link_config "$repo_dir/starship/starship.toml" "$config_home/starship.toml"
 
 systemd_user_home="$config_home/systemd/user"
 link_config \

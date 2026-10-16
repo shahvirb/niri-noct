@@ -7,6 +7,9 @@ Version-controlled configuration for Niri and Noctalia Shell on CachyOS.
 - `niri/config.kdl` → `~/.config/niri/config.kdl`
 - `noctalia/config.toml` → `~/.config/noctalia/config.toml`
 - `noctalia/gamer-mode.toml` → `~/.config/noctalia/gamer-mode.toml`
+- `ghostty/config` → `~/.config/ghostty/config`
+- `zsh/.zshrc` → `~/.zshrc`
+- `starship/starship.toml` → `~/.config/starship.toml`
 
 The files in this repository are the source of truth. `install.sh` creates the
 live configuration symlinks and backs up any existing regular files before

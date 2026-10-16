@@ -1,0 +1,67 @@
+# John-style developer prompt.
+add_newline = false
+palette = "mocha"
+
+format = """
+$username$hostname $directory$git_branch$git_status$cmd_duration
+$character"""
+
+[palettes.mocha]
+blue = "#89b4fa"
+green = "#a6e3a1"
+lavender = "#b4befe"
+mauve = "#cba6f7"
+peach = "#fab387"
+red = "#f38ba8"
+subtext = "#bac2de"
+teal = "#94e2d5"
+yellow = "#f9e2af"
+
+[username]
+show_always = true
+style_user = "bold blue"
+style_root = "bold red"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+ssh_symbol = " "
+style = "bold teal"
+format = "[@$hostname$ssh_symbol]($style)"
+
+[directory]
+home_symbol = " "
+read_only = " "
+style = "bold lavender"
+truncation_length = 3
+truncation_symbol = "…/"
+format = "[$path$read_only]($style) "
+
+[git_branch]
+symbol = " "
+style = "bold mauve"
+format = "on [$symbol$branch(:$remote_branch)]($style) "
+
+[git_status]
+style = "bold red"
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = "= "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕ "
+untracked = "?${count} "
+stashed = " "
+modified = " "
+staged = " "
+renamed = " "
+deleted = " "
+
+[cmd_duration]
+min_time = 1000
+format = "[$duration]($style)"
+style = "yellow"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold lavender)"
