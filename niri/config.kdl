@@ -198,14 +198,14 @@ binds {
         }
 
     focus-ring {
-        width 0.5
-        active-color "#00ac89"
+        width 2
+        active-color "#DFFF00"
         inactive-color "#00000000"
         }
 
         shadow {
-            softness 30
-            spread 5
+            softness 10
+            spread 2
             offset x=0 y=5
             color "#0007"
         }
