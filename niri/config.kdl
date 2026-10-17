@@ -65,6 +65,7 @@ binds {
     ALT+RETURN                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn-sh "ghostty"; }
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: Noctalia" { spawn-sh "noctalia msg panel-toggle launcher"; }
     MOD+D                               hotkey-overlay-title="Show desktop workspace" { focus-workspace "Desktop"; }
+    MOD+SHIFT+D                         hotkey-overlay-title="Open desktop terminal preset" { spawn-sh "ghostty --title='Desktop Terminal Top' & ghostty --title='Desktop Terminal Bottom'"; }
     MOD+B                               hotkey-overlay-title="Focus Browse workspace" { focus-workspace "Browse"; }
     MOD+SHIFT+B                         hotkey-overlay-title="Open Browser: brave" { spawn-sh "brave"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
@@ -176,6 +177,7 @@ binds {
     MOD+W                               hotkey-overlay-title="Toggle tabbed column" { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
+    Print                               hotkey-overlay-title="Screenshot area" { screenshot; }
     CTRL+SHIFT+1                        hotkey-overlay-title="Screenshot area" { screenshot; }
     CTRL+SHIFT+2                        hotkey-overlay-title="Screenshot screen" { screenshot-screen; }
     CTRL+SHIFT+3                        hotkey-overlay-title="Screenshot window" { screenshot-window; }
@@ -315,6 +317,26 @@ binds {
     window-rule {
         match app-id=r#"^com\.mitchellh\.ghostty$"#
         opacity 1.0
+    }
+
+    window-rule {
+        match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^Desktop Terminal Top$"#
+        open-on-workspace "Desktop"
+        open-floating true
+        opacity 0.75
+        default-column-width { proportion 0.32; }
+        default-window-height { proportion 0.48; }
+        default-floating-position x=8 y=96 relative-to="top-right"
+    }
+
+    window-rule {
+        match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^Desktop Terminal Bottom$"#
+        open-on-workspace "Desktop"
+        open-floating true
+        opacity 0.75
+        default-column-width { proportion 0.32; }
+        default-window-height { proportion 0.48; }
+        default-floating-position x=8 y=816.2 relative-to="top-right"
     }
 
     window-rule {
