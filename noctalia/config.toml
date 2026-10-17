@@ -32,14 +32,10 @@ widget_order = [
     "calendar_dp1",
     "world_clock_dp1",
     "cpu_dp1",
+    "cpu_temp_dp1",
     "gpu_dp1",
+    "gpu_temp_dp1",
     "network_dp1",
-    "clock_dp3",
-    "weather_dp3",
-    "world_clock_dp3",
-    "cpu_dp3",
-    "gpu_dp3",
-    "network_dp3",
 ]
 
 [desktop_widgets.widget.clock_dp1]
@@ -74,20 +70,36 @@ cx = 240.0
 cy = 850.0
 
 [desktop_widgets.widget.calendar_dp1.settings]
-show_events = false
-show_week_numbers = true
+show_events = true
+show_week_numbers = false
 background = false
 
 [desktop_widgets.widget.cpu_dp1]
 type = "sysmon"
 output = "DP-1"
+box_width = 220.0
+box_height = 100.0
 cx = 1900.0
 cy = 1580.0
 
 [desktop_widgets.widget.cpu_dp1.settings]
-display = "gauge"
+display = "graph"
 stat = "cpu_usage"
 color = "primary"
+show_label = true
+shadow = true
+background = false
+
+[desktop_widgets.widget.cpu_temp_dp1]
+type = "sysmon"
+output = "DP-1"
+cx = 2300.0
+cy = 1580.0
+
+[desktop_widgets.widget.cpu_temp_dp1.settings]
+display = "gauge"
+stat = "cpu_temp"
+color = "secondary"
 show_label = true
 shadow = true
 background = false
@@ -104,13 +116,29 @@ background = false
 [desktop_widgets.widget.gpu_dp1]
 type = "sysmon"
 output = "DP-1"
-cx = 2450.0
+box_width = 220.0
+box_height = 100.0
+cx = 2700.0
 cy = 1580.0
 
 [desktop_widgets.widget.gpu_dp1.settings]
-display = "gauge"
+display = "graph"
 stat = "gpu_usage"
 color = "primary"
+show_label = true
+shadow = true
+background = false
+
+[desktop_widgets.widget.gpu_temp_dp1]
+type = "sysmon"
+output = "DP-1"
+cx = 3100.0
+cy = 1580.0
+
+[desktop_widgets.widget.gpu_temp_dp1.settings]
+display = "gauge"
+stat = "gpu_temp"
+color = "secondary"
 show_label = true
 shadow = true
 background = false
@@ -118,88 +146,10 @@ background = false
 [desktop_widgets.widget.network_dp1]
 type = "sysmon"
 output = "DP-1"
-cx = 3200.0
+cx = 3550.0
 cy = 1580.0
 
 [desktop_widgets.widget.network_dp1.settings]
-display = "graph"
-stat = "net_rx"
-stat2 = "net_tx"
-color = "primary"
-color2 = "secondary"
-show_label = true
-shadow = true
-background = false
-
-[desktop_widgets.widget.clock_dp3]
-type = "clock"
-enabled = false
-output = "DP-3"
-cx = 850.0
-cy = 1580.0
-
-[desktop_widgets.widget.clock_dp3.settings]
-format = "{:%I:%M %p}"
-color = "primary"
-shadow = true
-background = false
-
-[desktop_widgets.widget.weather_dp3]
-type = "weather"
-output = "DP-3"
-cx = 350.0
-cy = 1580.0
-
-[desktop_widgets.widget.weather_dp3.settings]
-color = "on_surface"
-shadow = true
-show_forecast = false
-background = false
-
-[desktop_widgets.widget.cpu_dp3]
-type = "sysmon"
-output = "DP-3"
-cx = 1350.0
-cy = 1580.0
-
-[desktop_widgets.widget.cpu_dp3.settings]
-display = "gauge"
-stat = "cpu_usage"
-color = "primary"
-show_label = true
-shadow = true
-background = false
-
-[desktop_widgets.widget.world_clock_dp3]
-type = "niri-noct/world-clock-desktop:world_clock"
-output = "DP-3"
-cx = 2760.0
-cy = 1250.0
-
-[desktop_widgets.widget.world_clock_dp3.settings]
-background = false
-
-[desktop_widgets.widget.gpu_dp3]
-type = "sysmon"
-output = "DP-3"
-cx = 1850.0
-cy = 1580.0
-
-[desktop_widgets.widget.gpu_dp3.settings]
-display = "gauge"
-stat = "gpu_usage"
-color = "primary"
-show_label = true
-shadow = true
-background = false
-
-[desktop_widgets.widget.network_dp3]
-type = "sysmon"
-output = "DP-3"
-cx = 2550.0
-cy = 120.0
-
-[desktop_widgets.widget.network_dp3.settings]
 display = "graph"
 stat = "net_rx"
 stat2 = "net_tx"
