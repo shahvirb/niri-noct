@@ -1,6 +1,17 @@
 // Niri configuration for CachyOS
 // For documentation and full reference, see: https://github.com/YaLTeR/niri/wiki
 
+// ────────────── Named Workspaces ──────────────
+workspace "Code"
+workspace "Games"
+workspace "Browse"
+workspace "TV" {
+    open-on-output "DP-3"
+}
+workspace "Messaging" {
+    open-on-output "DP-3"
+}
+
 // ────────────── Input Configuration ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 
@@ -52,7 +63,8 @@ binds {
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn-sh "ghostty"; }
     ALT+RETURN                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn-sh "ghostty"; }
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: Noctalia" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    MOD+B                               hotkey-overlay-title="Open Browser: brave" { spawn-sh "brave"; }
+    MOD+B                               hotkey-overlay-title="Focus Browse workspace" { focus-workspace "Browse"; }
+    MOD+SHIFT+B                         hotkey-overlay-title="Open Browser: brave" { spawn-sh "brave"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     
     // Please choose your own file manager
@@ -107,6 +119,9 @@ binds {
     MOD+SHIFT+CTRL+DOWN                 hotkey-overlay-title="Move column to monitor below" { move-column-to-monitor-down; }
 
     // ─── Workspace Switching ───
+    MOD+G                               hotkey-overlay-title="Focus Games workspace" { focus-workspace "Games"; }
+    MOD+M                               hotkey-overlay-title="Focus Messaging workspace" { focus-workspace "Messaging"; }
+    MOD+V                               hotkey-overlay-title="Focus TV workspace" { focus-workspace "TV"; }
     MOD+WHEELSCROLLDOWN                 cooldown-ms=150 { focus-workspace-down; }
     MOD+WHEELSCROLLUP                   cooldown-ms=150 { focus-workspace-up; }
     MOD+CTRL+WHEELSCROLLDOWN            cooldown-ms=150 { move-column-to-workspace-down; }
@@ -146,7 +161,7 @@ binds {
 
     // ─── Layout Controls ───
     MOD+CTRL+F                          hotkey-overlay-title="Expand column to available width" { expand-column-to-available-width; }
-    MOD+C                               hotkey-overlay-title="Center column" { center-column; }
+    MOD+C                               hotkey-overlay-title="Focus Code workspace" { focus-workspace "Code"; }
     MOD+CTRL+C                          hotkey-overlay-title="Center visible columns" { center-visible-columns; }
     MOD+MINUS                           hotkey-overlay-title="Decrease column width" { set-column-width "-10%"; }
     MOD+EQUAL                           hotkey-overlay-title="Increase column width" { set-column-width "+10%"; }
@@ -256,6 +271,43 @@ binds {
     window-rule {
         match app-id=r#"firefox$"# title="^Picture-in-Picture$"
         open-floating true // Always float Firefox PiP windows
+    }
+
+    window-rule {
+        match app-id=r#"^code$"#
+        match app-id=r#"^com\.microsoft\.VSCode$"#
+        match app-id=r#"^Hermes$"#
+        open-on-workspace "Code"
+    }
+
+    window-rule {
+        match app-id=r#"^steam$"#
+        match app-id=r#"^steam_app_[0-9]+$"#
+        open-on-workspace "Games"
+    }
+
+    window-rule {
+        match app-id=r#"^brave-browser$"#
+        open-on-workspace "Browse"
+    }
+
+    window-rule {
+        match app-id=r#"^discord$"#
+        open-on-workspace "Messaging"
+        default-column-width { proportion 0.5; }
+        default-window-height { proportion 1.0; }
+    }
+
+    window-rule {
+        match app-id=r#"^brave-browser$"# title=r#"^Google Messages for web - Brave$"#
+        open-on-workspace "Messaging"
+        default-column-width { proportion 0.5; }
+        default-window-height { proportion 0.5; }
+    }
+
+    window-rule {
+        match app-id=r#"^(iptvnator|vlc)$"#
+        open-on-workspace "TV"
     }
 
     window-rule {
