@@ -1,6 +1,6 @@
 # Gamer Mode plugin and its compact bar toggle.
 [plugins]
-enabled = [ "nomadcxx/gamer-mode" ]
+enabled = [ "nomadcxx/gamer-mode", "noctalia/world_clock", "niri-noct/world-clock-desktop" ]
 
 [bar.default]
 start = [
@@ -8,6 +8,7 @@ start = [
     "wallpaper",
     "workspaces",
     "media",
+    "taskbar",
 ]
 end = [
     "tray",
@@ -18,7 +19,10 @@ end = [
     "volume",
     "brightness",
     "battery",
+    "disk_used",
+    "disk_free",
     "control-center",
     "nomadcxx/gamer-mode:gamermode",
+    "noctalia/world_clock:bar",
     "session",
 ]

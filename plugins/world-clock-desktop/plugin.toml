@@ -1,0 +1,12 @@
+id = "niri-noct/world-clock-desktop"
+name = "World Clock Desktop"
+version = "0.1.0"
+plugin_api = 20
+author = "niri-noct"
+license = "MIT"
+description = "A transparent desktop widget for Penang, Debrecen, and Bangalore."
+tags = ["desktop", "clock", "timezone"]
+
+[[desktop_widget]]
+id = "world_clock"
+entry = "desktop.luau"

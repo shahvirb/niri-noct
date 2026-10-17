@@ -5,6 +5,231 @@ mode = "dark"
 source = "builtin"
 wallpaper_scheme = "m3-content"
 
+[[plugins.source]]
+name = "niri-noct-local"
+kind = "path"
+location = "/home/shahvirb/gitsource/niri-noct/plugins"
+enabled = true
+
+[location]
+auto_locate = false
+address = "78751, Austin, TX"
+
+[weather]
+enabled = true
+refresh_minutes = 30
+unit = "imperial"
+
+[system.monitor]
+enabled = true
+
+[desktop_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "clock_dp1",
+    "weather_dp1",
+    "calendar_dp1",
+    "world_clock_dp1",
+    "cpu_dp1",
+    "gpu_dp1",
+    "network_dp1",
+    "clock_dp3",
+    "weather_dp3",
+    "world_clock_dp3",
+    "cpu_dp3",
+    "gpu_dp3",
+    "network_dp3",
+]
+
+[desktop_widgets.widget.clock_dp1]
+type = "clock"
+enabled = false
+output = "DP-1"
+cx = 1300.0
+cy = 1580.0
+
+[desktop_widgets.widget.clock_dp1.settings]
+format = "{:%I:%M %p}"
+color = "primary"
+shadow = true
+background = false
+
+[desktop_widgets.widget.weather_dp1]
+type = "weather"
+output = "DP-1"
+cx = 600.0
+cy = 1580.0
+
+[desktop_widgets.widget.weather_dp1.settings]
+color = "on_surface"
+shadow = true
+show_forecast = false
+background = false
+
+[desktop_widgets.widget.calendar_dp1]
+type = "calendar"
+output = "DP-1"
+cx = 240.0
+cy = 850.0
+
+[desktop_widgets.widget.calendar_dp1.settings]
+show_events = false
+show_week_numbers = true
+background = false
+
+[desktop_widgets.widget.cpu_dp1]
+type = "sysmon"
+output = "DP-1"
+cx = 1900.0
+cy = 1580.0
+
+[desktop_widgets.widget.cpu_dp1.settings]
+display = "gauge"
+stat = "cpu_usage"
+color = "primary"
+show_label = true
+shadow = true
+background = false
+
+[desktop_widgets.widget.world_clock_dp1]
+type = "niri-noct/world-clock-desktop:world_clock"
+output = "DP-1"
+cx = 3760.0
+cy = 1250.0
+
+[desktop_widgets.widget.world_clock_dp1.settings]
+background = false
+
+[desktop_widgets.widget.gpu_dp1]
+type = "sysmon"
+output = "DP-1"
+cx = 2450.0
+cy = 1580.0
+
+[desktop_widgets.widget.gpu_dp1.settings]
+display = "gauge"
+stat = "gpu_usage"
+color = "primary"
+show_label = true
+shadow = true
+background = false
+
+[desktop_widgets.widget.network_dp1]
+type = "sysmon"
+output = "DP-1"
+cx = 3200.0
+cy = 1580.0
+
+[desktop_widgets.widget.network_dp1.settings]
+display = "graph"
+stat = "net_rx"
+stat2 = "net_tx"
+color = "primary"
+color2 = "secondary"
+show_label = true
+shadow = true
+background = false
+
+[desktop_widgets.widget.clock_dp3]
+type = "clock"
+enabled = false
+output = "DP-3"
+cx = 850.0
+cy = 1580.0
+
+[desktop_widgets.widget.clock_dp3.settings]
+format = "{:%I:%M %p}"
+color = "primary"
+shadow = true
+background = false
+
+[desktop_widgets.widget.weather_dp3]
+type = "weather"
+output = "DP-3"
+cx = 350.0
+cy = 1580.0
+
+[desktop_widgets.widget.weather_dp3.settings]
+color = "on_surface"
+shadow = true
+show_forecast = false
+background = false
+
+[desktop_widgets.widget.cpu_dp3]
+type = "sysmon"
+output = "DP-3"
+cx = 1350.0
+cy = 1580.0
+
+[desktop_widgets.widget.cpu_dp3.settings]
+display = "gauge"
+stat = "cpu_usage"
+color = "primary"
+show_label = true
+shadow = true
+background = false
+
+[desktop_widgets.widget.world_clock_dp3]
+type = "niri-noct/world-clock-desktop:world_clock"
+output = "DP-3"
+cx = 2760.0
+cy = 1250.0
+
+[desktop_widgets.widget.world_clock_dp3.settings]
+background = false
+
+[desktop_widgets.widget.gpu_dp3]
+type = "sysmon"
+output = "DP-3"
+cx = 1850.0
+cy = 1580.0
+
+[desktop_widgets.widget.gpu_dp3.settings]
+display = "gauge"
+stat = "gpu_usage"
+color = "primary"
+show_label = true
+shadow = true
+background = false
+
+[desktop_widgets.widget.network_dp3]
+type = "sysmon"
+output = "DP-3"
+cx = 2550.0
+cy = 120.0
+
+[desktop_widgets.widget.network_dp3.settings]
+display = "graph"
+stat = "net_rx"
+stat2 = "net_tx"
+color = "primary"
+color2 = "secondary"
+show_label = true
+shadow = true
+background = false
+
+[widget.taskbar]
+group_by_workspace = false
+show_all_outputs = false
+only_active_workspace = false
+show_window_title = true
+window_title_max_width = 200
+
+[widget.disk_used]
+type = "sysmon"
+stat = "disk_used"
+path = "/"
+visualization = "none"
+custom_label = "Disk used"
+
+[widget.disk_free]
+type = "sysmon"
+stat = "disk_free"
+path = "/"
+visualization = "none"
+custom_label = "Disk free"
+
 [widget.workspaces]
 label_source = "name"
 max_label_chars = 12

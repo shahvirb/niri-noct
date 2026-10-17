@@ -5,6 +5,7 @@
 workspace "Code"
 workspace "Games"
 workspace "Browse"
+workspace "Desktop"
 workspace "TV" {
     open-on-output "DP-3"
 }
@@ -63,6 +64,7 @@ binds {
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn-sh "ghostty"; }
     ALT+RETURN                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn-sh "ghostty"; }
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher: Noctalia" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    MOD+D                               hotkey-overlay-title="Show desktop workspace" { focus-workspace "Desktop"; }
     MOD+B                               hotkey-overlay-title="Focus Browse workspace" { focus-workspace "Browse"; }
     MOD+SHIFT+B                         hotkey-overlay-title="Open Browser: brave" { spawn-sh "brave"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
@@ -308,6 +310,11 @@ binds {
     window-rule {
         match app-id=r#"^(iptvnator|vlc)$"#
         open-on-workspace "TV"
+    }
+
+    window-rule {
+        match app-id=r#"^com\.mitchellh\.ghostty$"#
+        opacity 1.0
     }
 
     window-rule {
