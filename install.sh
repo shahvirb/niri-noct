@@ -31,6 +31,10 @@ link_config "$repo_dir/ghostty/config" "$config_home/ghostty/config"
 link_config "$repo_dir/zsh/.zshrc" "$HOME/.zshrc"
 link_config "$repo_dir/starship/starship.toml" "$config_home/starship.toml"
 
+link_config \
+    "$repo_dir/wireplumber/wireplumber.conf.d/50-spotify-follow-default.conf" \
+    "$config_home/wireplumber/wireplumber.conf.d/50-spotify-follow-default.conf"
+
 systemd_user_home="$config_home/systemd/user"
 link_config \
     "$repo_dir/systemd/user/niri-lg-display-reset.service" \
